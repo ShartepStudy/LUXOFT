@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{102ef9da-dac4-4a0b-a813-87f918e4485f}</UniqueIdentifier>
+      <Extensions>txt</Extensions>
+    </Filter>
+    <Filter Include="HTML Files">
+      <UniqueIdentifier>{bcef74c0-27a2-4d46-848e-4e4f121f528e}</UniqueIdentifier>
+      <Extensions>htm</Extensions>
+    </Filter>
+    <Filter Include="Image Files">
+      <UniqueIdentifier>{0bfd8c2e-0ecc-4753-bacf-14b16c67469a}</UniqueIdentifier>
+      <Extensions>bmp</Extensions>
+    </Filter>
+    <Filter Include="Script Files">
+      <UniqueIdentifier>{133428e7-3a54-4a28-909a-d6e5727eb696}</UniqueIdentifier>
+      <Extensions>js</Extensions>
+    </Filter>
+    <Filter Include="Miscellaneous Files">
+      <UniqueIdentifier>{a38199b1-83f6-4686-a774-8f6e5481984a}</UniqueIdentifier>
+      <Extensions>vsz;vsdir;ico;vcxproj;csproj;css;inf</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\1033\ReadMe.txt">
+      <Filter>Template Files</Filter>
+    </None>
+    <None Include="Templates\1033\Templates.inf">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="test5.vsz">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="Scripts\1033\default.js">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="default.vcxproj">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="test5.vsdir">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="test5.ico">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="HTML\1033\default.htm">
+      <Filter>HTML Files</Filter>
+    </None>
+    <None Include="Templates\1033\Sample.txt">
+      <Filter>Template Files</Filter>
+    </None>
+    <None Include="Images\test5.gif" />
+    <None Include="Images\test5_Background.gif" />
+    <None Include="1033\NewStyles.css">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="1033\Images\DottedHori.gif" />
+    <None Include="1033\Images\DottedVert.gif" />
+    <None Include="1033\Images\spacer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="m.cpp" />
+  </ItemGroup>
+</Project>

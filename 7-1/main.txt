@@ -1,0 +1,121 @@
+#include<iostream>
+using namespace std;
+
+class CCard 
+{
+private:
+	unsigned int mPin;
+	float mBalance;
+	char * mName;
+	bool mIsAutorized;
+public:
+	CCard();
+	CCard(char * name, int pin);
+	~CCard();
+	bool autorization(int pin);
+	float balance();
+	float getMoney(float count);
+	float setMoney(float count);
+};
+
+CCard:CCard(void)
+	: mBalance(0)
+	, mName("Petrash Oleksandr")
+	, mIsAutorized(false)
+{
+	mPin=rand()%9999;
+	printf("rand pin=%d\n", mPin);
+}
+
+CCard:CCard(char * name, int pin)
+	: mPin(pin)
+	, mBalance(0)
+	, mIsAutorized(false)
+{
+	strcpy(mName, name);
+}
+
+int CCard:balance()
+{
+	if (mIsAutorized) return mBalance;
+	return -1;
+}
+
+float CCard:getMoney(float count)
+{
+	if (mIsAutorized)
+	{
+		if (mBalance-count > 0) 
+		{
+			mBalance-=count;
+			return count;
+		}
+		else 
+			printf("No money!\n");
+	}	
+	return -1;
+}
+
+float CCard:setMoney(float count)
+{
+	if (mIsAutorized)
+	{
+		mBalance+=count;
+		return mBalance;
+	}	
+	return -1;
+}
+
+bool CCard:autorization(int pin)
+{
+	if (mPin==pin) 
+	{
+		mIsAutorized = true;
+		return true;
+	}
+	return false;
+}
+
+void main()
+{
+	int pin;
+	float summ;
+	chr * name;
+	CCard a;
+	
+	printf("Enter pin: ");
+	scanf("%d", pin);
+	
+	a.autorization(pin);
+	
+	printf("Push money, enter summ: ");
+	scanf("%f", summ);
+	printf("Your balance is: %f\n", a.setMoney(summ));
+	
+	printf("Get money, enter summ: ");
+	scanf("%f", summ);
+	printf("Take your money: %f\n", a.getMoney(summ));
+
+
+	
+	printf("Enter your name: ");
+	scanf("%s", name);
+	printf("Enter your pin: ");
+	scanf("%d", pin);
+	
+	CCard b(name, pin);
+	
+	printf("Enter pin for autorization: ");
+	scanf("%d", pin);
+	
+	a.autorization(pin);
+	
+	printf("Push money, enter summ: ");
+	scanf("%f", summ);
+	printf("Your balance is: %f\n", a.setMoney(summ));
+	
+	printf("Get money, enter summ: ");
+	scanf("%f", summ);
+	printf("Take your money: %f\n", a.getMoney(summ));
+
+}
